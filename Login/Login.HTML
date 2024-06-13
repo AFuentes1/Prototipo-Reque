@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm" action="">
+            <h1>Iniciar Sesión</h1>
+            <div class="entradaCaja">   
+                <input id="Usuario" type="text" placeholder="Usuario" required> 
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="entradaCaja">   
+                <input id="Contraseña" type="password" placeholder="Contraseña" required> 
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="recordarSiempre">
+                <label><input type="checkbox">Recordar</label>
+            </div>
+
+            <div class="entradaCaja">   
+                <input type="file" id="fileInput" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+    <script src="Scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturas</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <div class="wrapper" id="wrapperFiltro">
+        <!-- Añadido: Lista desplegable, campo de texto y botón de consulta -->
+        
+        <div class="wrapper" id="dataContainer"> 
+            <!-- Nuevo botón para reportar problemas -->
+            <button class="customButton" id="reportarProblemaButton">Reportar Problema</button>
+            <button class="customButton" id="consultarEstadoButton">Consultar Estado de un Reporte</button>
+        </div>
+    </div>
+    
+    <!-- Modal para el formulario de reporte de problemas -->
+    <div id="reportarProblemaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reportar un Problema</h2>
+            <form id="problemaForm" action="envioProblema.php" method="post" enctype="multipart/form-data">
+                <label for="descripcion">Descripción del problema:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+                
+                <label for="categoria">Categoría del problema:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="categoria1">Categoría 1</option>
+                    <option value="categoria2">Categoría 2</option>
+                    <option value="categoria3">Categoría 3</option>
+                </select>
+                
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+                
+                <label for="fotos">Adjuntar fotos (opcional):</label>
+                <input type="file" id="fotos" name="fotos[]" multiple>
+                
+                <button type="submit">Enviar Reporte</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para consultar estado del reporte -->
+    <div id="consultarEstadoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Consultar Estado de un Reporte</h2>
+            <div id="reportesContainer">
+                <!-- Aquí se mostrarán los reportes del usuario -->
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts.js"></script>
+</body>
+</html>
