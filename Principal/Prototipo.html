@@ -6,20 +6,21 @@
     <title>Facturas</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
 
     <div class="wrapper" id="wrapperFiltro">
-        <!-- Añadido: Lista desplegable, campo de texto y botón de consulta -->
         
         <div class="wrapper" id="dataContainer"> 
-            <!-- Nuevo botón para reportar problemas -->
+            <!-- Botón para reportar problemas -->
             <button class="customButton" id="reportarProblemaButton">Reportar Problema</button>
             <button class="customButton" id="consultarEstadoButton">Consultar Estado de un Reporte</button>
+            <button class="customButton" id="consultarMapaIncidencias">Mapa de Incidencias</button>
         </div>
     </div>
     
-    <!-- Modal para el formulario de reporte de problemas -->
+    <!-- Form Reporte de problemas -->
     <div id="reportarProblemaModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -57,6 +58,16 @@
         </div>
     </div>
 
+    <!-- Modal para el mapa de incidencias -->
+    <div id="mapaIncidencias" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mapa de Incidencias</h2>
+            <div id="map" style="height: 500px;"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="Scripts.js"></script>
 </body>
 </html>
